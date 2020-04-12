@@ -4,21 +4,22 @@ import ajax from "./ajax"
 
 
 //请求登录
-export function reqLogin(username,psaaword){
+const BASE=" "
+export function reqLogin(username,password){
    ajax({
-       
-       url:"/login",
        method:"post",
+       url:BASE+"/login",
        data:{
-           username,
-           psaaword
+        username,
+        password
        }
    }) 
 
 }
 
-const name="xiaomian"
-const pwd="123"
-reqLogin(name,pwd)
+
+/* const name="admin"
+const pwd="admin" 
+reqLogin(name,pwd) */
 
 //将实参数据赋值形参变量
